@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.accenture.nao.cv.AcnNaoController">
+    <top>
+        <VBox alignment="CENTER" spacing="15">
+            <!--<HBox alignment="CENTER">-->
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+            <Button fx:id="cameraButton" alignment="center" text="Start camera" onAction="#startCamera" disable="false"/>
+        </VBox>
+    </top>
+    <left>
+        <VBox alignment="CENTER">
+            <padding>
+                <Insets right="10" left="10"/>
+            </padding>
+            <ImageView fx:id="originalFrame"/>
+        </VBox>
+    </left>
+    <right>
+        <VBox alignment="CENTER">
+            <padding>
+                <Insets right="10" left="10"/>
+            </padding>
+            <ImageView fx:id="calibratedFrame"/>
+        </VBox>
+    </right>
+    <bottom>
+        <VBox alignment="CENTER" spacing="15">
+            <!--<HBox alignment="CENTER">-->
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+            <Separator/>
+            <Label fx:id="mouseCurrentValues"/>
+            <!--</HBox>-->
+            <Separator/>
+            <Label fx:id="hsvCurrentValues"/>
+        </VBox>
+    </bottom>
+</BorderPane>
